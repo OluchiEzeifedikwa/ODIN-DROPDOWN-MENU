@@ -7,15 +7,8 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 
 
-const nextSlide = () => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateSlide();
-}
 
-const prevSlide = () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  updateSlide();
-}
+
 
 const updateSlide = () => {
   slides.forEach((slide, index) => {
@@ -45,6 +38,21 @@ dots.forEach((dot, index) => {
   });
 });
 
+// setInterval(nextSlide, 5000);
+
+const nextSlide = () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide();
+}
+nextSlide();
+
+
+const prevSlide = () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+prevSlide();
+
 setInterval(nextSlide, 5000);
 
 
@@ -54,10 +62,13 @@ const createVisibleMenu = () => {
 document.getElementById('myDropdown').
 classList.add('dropdown-content');
 }
+
 createVisibleMenu();
+
+
 
 
 export { createVisibleMenu }
 export { prevSlide }
 export { nextSlide }
- 
+export { updateSlide }

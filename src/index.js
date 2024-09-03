@@ -1,4 +1,10 @@
+
 import './style.css';
+
+import { updateSlide  } from './dropdown.js';
+
+updateSlide()
+
 
 import { createVisibleMenu } from "./dropdown.js";
 
@@ -12,13 +18,24 @@ import { prevSlide} from "./dropdown.js";
 
 prevSlide()
 
+const dots = document.querySelectorAll('.dot');
 
-// const slides = document.querySelector('.slides');
-// const prevButton = document.querySelector('.prev');
-// const nextButton = document.querySelector('.next');
-
-
-// const form1 = document.getElementById('form1');
-// const openButton = document.querySelector('.open-button');
 document.getElementById('prev-button').addEventListener('click', prevSlide);
 document.getElementById('next-button').addEventListener('click', nextSlide);
+
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      updateSlide();
+      
+    });
+  });
+  
+setInterval(nextSlide, 5000);
+
+
+  
+  
+   
+

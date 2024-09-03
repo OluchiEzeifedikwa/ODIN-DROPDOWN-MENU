@@ -40,22 +40,22 @@
   }
  
 
-  /* .visible {
+  .visible {
     display: none;
   } */
 
-  /* .hidden {
+  .hidden {
     display: none;
-  } */
+  } 
 
 
-  /* .slides{
+   .slides{
     display: inline-grid;
   }
 
   .carouselcontainer{
     display: relative;
-  } */
+  }
 
   .dots {
     text-align: left;
@@ -74,4 +74,8 @@
   
   .dot.active {
     background-color: #666;
+  }  
+
+  .body {
+    background-color: grey;
   }

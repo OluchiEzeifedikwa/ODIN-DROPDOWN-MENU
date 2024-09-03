@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODIN DROPDOWN MENU</title>
 </head>
-<body>
-    <header>ODIN DROPDOWN MENU</header>
+<body class="body">
+    <header style="text-align: center;">ODIN DROPDOWN MENU</header>
     <div class="dropdown" >
         <button class="dropbtn">Select an option</button>
         <div class="dropdown-content" id="myDropdown"> 
@@ -16,6 +16,7 @@
           <a href="#">Option 4</a>
         </div>
     </div>
+    <br>
 
 
     <div>
@@ -26,6 +27,7 @@
         <a href="#">Option 4</a>
       </select>
     </div>
+    <br>
     
 
 
@@ -33,20 +35,29 @@
 
 
     <button id="prev-button">&lsaquo;</button>
+    
     <button id="next-button">&rsaquo;</button>
+    
+    
+
+    
 
     <div class="carouselcontainer">
-      <div>
-        <img src="" alt="slt" class="slide">
-        <img src="" alt="alt" class="slide">
-        <img src="" alt="blt" class="slide">
+      <div id="img">
+        <img src="lady.jpeg" alt="slt" class="slide" style="width:200px;">
+        <img src="perf.jpeg" alt="alt" class="slide" style="width:200px; height: 135px;">
+        <img src="dior.jpeg" alt="blt" class="slide" style="width:200px; height: 135px;">
         <!-- <img src="" alt="slt"> -->
       </div>
+
     </div>
-    <div class="dots">
-      <span class="dot" data slide="0"></span>
-      <span class="dot" data slide="1"></span>
-      <span class="dot" data slide="2"></span>
+      
+    <div>
+      <div class="dots">
+        <span class="dot" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
     </div>
 </body>
 </html>

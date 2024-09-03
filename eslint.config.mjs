@@ -1,28 +1,9 @@
-import { createConfig } from '@eslint/config';
-import { pluginJs } from '@eslint/eslint-plugin';
-import { globals } from 'globals';
+import globals from "globals";
+import pluginJs from "@eslint/js";
+
 
 export default [
-  {
-    languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
-    },
-  },
+  {languageOptions: { globals: globals.browser, ...globals.node } } ,
   pluginJs.configs.recommended,
-  createConfig({
-    env: {
-      browser: true,
-      es2021: true,
-    },
-    extends: 'eslint:recommended',
-    parserOptions: {
-      ecmaVersion: 12,
-      sourceType: 'module',
-    },
-    rules: {
-      indent: ['error', 2],
-      quotes: ['error', 'single'],
-    },
-  }),
 ];
 
